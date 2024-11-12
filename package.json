@@ -1,0 +1,6 @@
+{
+  "name": "docker-compose-test",
+  "scripts": {
+    "docker-compose": "./docker-compose.sh"
+  }
+}

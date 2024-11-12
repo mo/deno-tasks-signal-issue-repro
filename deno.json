@@ -1,0 +1,5 @@
+{
+  "tasks": {
+    "docker-compose": "./docker-compose.sh"
+  }
+}

@@ -1,0 +1,4 @@
+services:
+  node1:
+    image: "node:22"
+    entrypoint: ["node", "--eval", "setInterval(() => console.log(process.pid), 1000); process.on('SIGHUP', () => console.log('HUP'))"]
