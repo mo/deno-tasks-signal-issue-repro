@@ -1,6 +1,14 @@
 {
   "name": "docker-compose-test",
   "scripts": {
-    "docker-compose": "./docker-compose.sh"
+    "docker-compose": "./docker-compose.sh",
+    "docker-compose-no-sh-file": "docker compose -f compose.yaml up",
+    "sleep": "sleep 999",
+    "simple-builtin": "echo hello",
+    "simple-bin": "date",
+    "cmd": "cat /dev/urandom | head -c 1000000 | sha256sum",
+    "hashpipe-slow": "$(which cat) /dev/urandom | $(which head) -c 1000000000 | sha256sum",
+    "hashpipe-slower": "$(which cat) /dev/urandom | $(which head) -c 10000000000 | sha256sum",
+    "forever-pipe": "yes | grep -v mystery | grep -v magic | sort | uniq -c"
   }
 }
